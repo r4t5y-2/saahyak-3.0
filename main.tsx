@@ -1,4 +1,4 @@
-```tsx
+
 import { Toaster } from "@/components/ui/sonner";
 import { StoryBackdrop } from "@/components/StoryBackdrop";
 import { RequireAuth } from "@/components/RequireAuth";
