@@ -1,0 +1,437 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --font-sans: "Inter", "Nunito", ui-rounded, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Baloo 2", "Nunito", ui-rounded, "Segoe UI", sans-serif;
+  --font-story: "Patrick Hand", "Baloo 2", "Comic Sans MS", cursive;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-line: var(--line);
+  --color-marigold: var(--marigold);
+  --color-marigold-deep: var(--marigold-deep);
+  --color-marigold-soft: var(--marigold-soft);
+  --color-ink-on-marigold: var(--ink-on-marigold);
+  --color-scene-home: var(--scene-home);
+  --color-scene-school: var(--scene-school);
+  --color-scene-clinic: var(--scene-clinic);
+  --color-scene-grandma: var(--scene-grandma);
+  --color-scene-overwhelmed: var(--scene-overwhelmed);
+  --color-sky: var(--sky);
+  --color-coral: var(--coral);
+  --color-success: var(--success);
+  --color-cat-person: var(--cat-person);
+  --color-cat-action: var(--cat-action);
+  --color-cat-object: var(--cat-object);
+  --color-cat-social: var(--cat-social);
+  --color-cat-person-border: var(--cat-person-border);
+  --color-cat-action-border: var(--cat-action-border);
+  --color-cat-object-border: var(--cat-object-border);
+  --color-cat-social-border: var(--cat-social-border);
+  --color-story-pink: var(--story-pink);
+  --color-story-blue: var(--story-blue);
+  --color-story-mint: var(--story-mint);
+  --color-story-lavender: var(--story-lavender);
+  --color-story-butter: var(--story-butter);
+  --color-gold: var(--gold);
+}
+
+/* ————————————————————————————————————————————————————————————————
+   Sahaayak — storybook stationery theme.
+   The whole product lives on a pale butter-yellow page with soft vertical
+   cream stripes and scattered pastel stars, inside soft cream cards with
+   warm golden-brown outlines and rounded mustard pill buttons.
+   Flat and matte: no gradients on surfaces, no glass, no drop shadows.
+   ———————————————————————————————————————————————————————————————— */
+:root {
+  --radius: 1.25rem;
+  --background: #fbeece; /* pale butter yellow — full-page base */
+  --foreground: #5b4426; /* warm cocoa-brown text */
+  --card: #fffdf2; /* very soft cream card surface */
+  --card-foreground: #5b4426;
+  --popover: #fffdf2;
+  --popover-foreground: #5b4426;
+  --primary: #d99b2b; /* mustard — pill buttons */
+  --primary-foreground: #4a3413; /* deep cocoa on mustard */
+  --secondary: #f6c6a8; /* soft peach */
+  --secondary-foreground: #6b4028;
+  --muted: #fdf3d0; /* deeper cream */
+  --muted-foreground: #8a7350;
+  --accent: #f7d574; /* warm butter accent */
+  --accent-foreground: #5b4426;
+  --destructive: #e2707e; /* soft strawberry — gentle, not alarming */
+  --border: #e8cf96;
+  --input: #eed9a8;
+  --ring: #c98a2e;
+  --chart-1: #f3aec4; /* pink */
+  --chart-2: #a8cbea; /* blue */
+  --chart-3: #b5e0c5; /* mint */
+  --chart-4: #cfc3ec; /* lavender */
+  --chart-5: #f7d574; /* yellow */
+  --sidebar: #fffdf2;
+  --sidebar-foreground: #5b4426;
+  --sidebar-primary: #d99b2b;
+  --sidebar-primary-foreground: #4a3413;
+  --sidebar-accent: #fdf3d0;
+  --sidebar-accent-foreground: #5b4426;
+  --sidebar-border: #e8cf96;
+  --sidebar-ring: #c98a2e;
+
+  /* Sahaayak extra tokens */
+  --paper: #fbeece; /* page */
+  --surface: #fffdf2; /* card face — soft cream */
+  --ink: #5b4426;
+  --ink-soft: #8a7350;
+  --line: #e3b75f; /* warm golden-brown outline for cards & tiles */
+  --gold: #c98a2e; /* deep golden-brown detail color */
+  --marigold: #f7c948; /* friendly yellow — active states */
+  --marigold-deep: #a9761d;
+  --marigold-soft: #fdf0c2;
+  --ink-on-marigold: #5b4426;
+  --sky: #a8cbea; /* pastel blue — Board/communication accent */
+  --coral: #f6b39c; /* pastel coral — Explore accent */
+  --success: #a5d6b0; /* pastel mint — Progress accent */
+  --scene-home: #f2a48d; /* soft salmon-peach — Home */
+  --scene-school: #8fb8e0; /* baby blue — School */
+  --scene-clinic: #f0a3b8; /* pastel rose — Clinic */
+  --scene-grandma: #bfa7e6; /* lavender — Grandma's House */
+  --scene-overwhelmed: #9ed4b4; /* mint — Calm Corner */
+
+  /* Storybook chart / badge pastels (soft hand-drawn charts) */
+  --story-pink: #f3aec4;
+  --story-blue: #a8cbea;
+  --story-mint: #b5e0c5;
+  --story-lavender: #cfc3ec;
+  --story-butter: #f7d574;
+
+  /* Modified Fitzgerald Key — muted pastel tile tints (Board screen).
+     Defined in both modes so the coding never changes meaning. */
+  --cat-person: #fdf3c4; /* pastel yellow — people & pronouns */
+  --cat-person-border: #c9a23a;
+  --cat-action: #d8efdc; /* pastel green — actions */
+  --cat-action-border: #6faf84;
+  --cat-object: #fde3cd; /* pastel orange — objects */
+  --cat-object-border: #d09258;
+  --cat-social: #d8e8fa; /* pastel blue — social & core */
+  --cat-social-border: #6f95c9;
+}
+
+/* Kept for completeness — the storybook theme is a bright, low-glare paper
+   world with no dark mode surface anywhere in the product. */
+.dark {
+  --background: #fbeece;
+  --foreground: #5b4426;
+  --card: #fffdf2;
+  --card-foreground: #5b4426;
+  --popover: #fffdf2;
+  --popover-foreground: #5b4426;
+  --primary: #d99b2b;
+  --primary-foreground: #4a3413;
+  --secondary: #f6c6a8;
+  --secondary-foreground: #6b4028;
+  --muted: #fdf3d0;
+  --muted-foreground: #8a7350;
+  --accent: #f7d574;
+  --accent-foreground: #5b4426;
+  --destructive: #e2707e;
+  --border: #e8cf96;
+  --input: #eed9a8;
+  --ring: #c98a2e;
+  --paper: #fbeece;
+  --surface: #fffdf2;
+  --ink: #5b4426;
+  --ink-soft: #8a7350;
+  --line: #e3b75f;
+  --gold: #c98a2e;
+  --marigold: #f7c948;
+  --marigold-deep: #a9761d;
+  --marigold-soft: #fdf0c2;
+  --ink-on-marigold: #5b4426;
+}
+
+/* ——— Sensory-reduced mode ———
+   Same storybook world, one calm step further: the stripes and starfield
+   quiet down, colors desaturate, and every animation switches off.
+   Navigation, layout and tap targets are identical in both modes. */
+.mode-sensory {
+  --background: #f8eed9;
+  --foreground: #55432a;
+  --card: #fffdf2;
+  --card-foreground: #55432a;
+  --popover: #fffdf2;
+  --popover-foreground: #55432a;
+  --primary: #c1913a;
+  --primary-foreground: #46320f;
+  --secondary: #eccfb6;
+  --secondary-foreground: #61452f;
+  --muted: #f6ecd2;
+  --muted-foreground: #7d6a4e;
+  --accent: #ecd795;
+  --accent-foreground: #55432a;
+  --destructive: #c96f78;
+  --border: #ddc28e;
+  --input: #e3cea1;
+  --ring: #b07f35;
+
+  --paper: #f8eed9;
+  --surface: #fffdf2;
+  --ink: #55432a;
+  --ink-soft: #7d6a4e;
+  --line: #d9b265;
+  --gold: #a9802f;
+  --marigold: #e5bd55;
+  --marigold-deep: #8f641c;
+  --marigold-soft: #f4e6bc;
+  --ink-on-marigold: #46320f;
+  --sky: #a3bfda;
+  --coral: #e5b09b;
+  --success: #a3c8ab;
+  --scene-home: #dfa692;
+  --scene-school: #8caccc;
+  --scene-clinic: #dca4b2;
+  --scene-grandma: #a994cf;
+  --scene-overwhelmed: #92c2a6;
+
+  --story-pink: #e7b3c1;
+  --story-blue: #a9c2dc;
+  --story-mint: #b2d1ba;
+  --story-lavender: #c2b8dd;
+  --story-butter: #e8cd80;
+
+  --cat-person: #f7ecc4;
+  --cat-person-border: #a98f43;
+  --cat-action: #dcebdd;
+  --cat-action-border: #679a72;
+  --cat-object: #f7e2ce;
+  --cat-object-border: #b08253;
+  --cat-social: #dce7f5;
+  --cat-social-border: #6689b5;
+}
+
+/* Sensory mode: all animation disabled, everywhere. */
+.mode-sensory *,
+.mode-sensory *::before,
+.mode-sensory *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply text-foreground font-sans;
+    /* Full-page storybook backdrop, on every screen:
+       pale butter-yellow with soft vertical cream-and-yellow stripes,
+       and a gentle scattered field of pastel stars. */
+    background-color: var(--paper);
+    background-image:
+      /* pastel star field — tiny dots in pink, blue, lavender, white */
+      radial-gradient(circle 3px at 22px 30px, #f3aec4 92%, transparent),
+      radial-gradient(circle 2.5px at 118px 74px, #a8cbea 92%, transparent),
+      radial-gradient(circle 2px at 196px 18px, #ffffff 92%, transparent),
+      radial-gradient(circle 3px at 84px 138px, #cfc3ec 92%, transparent),
+      radial-gradient(circle 2px at 232px 110px, #f7d574 92%, transparent),
+      radial-gradient(circle 2.5px at 46px 196px, #ffffff 92%, transparent),
+      radial-gradient(circle 2px at 170px 190px, #f3aec4 92%, transparent),
+      radial-gradient(circle 2.5px at 250px 226px, #a8cbea 92%, transparent),
+      radial-gradient(circle 2px at 12px 250px, #f7d574 92%, transparent),
+      radial-gradient(circle 2.5px at 140px 258px, #ffffff 92%, transparent),
+      radial-gradient(circle 2px at 210px 300px, #cfc3ec 92%, transparent),
+      radial-gradient(circle 3px at 66px 320px, #a8cbea 92%, transparent),
+      radial-gradient(circle 2px at 186px 348px, #ffffff 92%, transparent),
+      radial-gradient(circle 2.5px at 30px 388px, #f3aec4 92%, transparent),
+      radial-gradient(circle 2px at 246px 396px, #f7d574 92%, transparent),
+      /* soft vertical cream-and-yellow stripes */
+      repeating-linear-gradient(
+        90deg,
+        rgba(255, 253, 242, 0.9) 0px,
+        rgba(255, 253, 242, 0.9) 72px,
+        rgba(250, 232, 166, 0.55) 72px,
+        rgba(250, 232, 166, 0.55) 144px,
+        rgba(255, 250, 224, 0.75) 144px,
+        rgba(255, 250, 224, 0.75) 216px,
+        rgba(249, 228, 158, 0.45) 216px,
+        rgba(249, 228, 158, 0.45) 288px
+      );
+    background-size: 264px 420px, 264px 420px, 264px 420px, 264px 420px,
+      264px 420px, 264px 420px, 264px 420px, 264px 420px, 264px 420px,
+      264px 420px, 264px 420px, 264px 420px, 264px 420px, 264px 420px,
+      264px 420px, 100% 100%;
+    background-attachment: fixed;
+    letter-spacing: 0.01em;
+  }
+  /* text size setting (Settings → Accessibility); labels always stay large */
+  html[data-text="large"] {
+    font-size: 18px;
+  }
+  html[data-text="xlarge"] {
+    font-size: 20px;
+  }
+  /* high-contrast text: deeper ink on every label */
+  html[data-contrast="true"] body {
+    --ink: #43301a;
+    --ink-soft: #6b5638;
+    --foreground: #43301a;
+  }
+  html[data-contrast="true"] body button,
+  html[data-contrast="true"] body [role="button"] {
+    font-weight: 800;
+  }
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+  ::selection {
+    background: var(--marigold-soft);
+    color: var(--ink);
+  }
+}
+
+@layer utilities {
+  /* thick, unmistakable golden focus — visible on every control */
+  .focus-ring-sahaayak {
+    outline: 4px solid var(--marigold);
+    outline-offset: 2px;
+  }
+  :focus-visible {
+    outline: 4px solid var(--marigold);
+    outline-offset: 2px;
+  }
+  /* the one motion in the whole app: a brief, gentle settle when a word is added */
+  .animate-word-in {
+    animation: word-in 420ms ease-out 1;
+  }
+  .animate-note-in {
+    animation: word-in 420ms ease-out 1;
+  }
+  @keyframes word-in {
+    0% {
+      opacity: 0.35;
+    }
+    35% {
+      opacity: 1;
+      background-color: var(--marigold-soft);
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-word-in,
+    .animate-note-in,
+    .animate-fade-in,
+    .animate-bounce-soft,
+    .animate-wave {
+      animation: none;
+    }
+  }
+  /* gentle fades only — nothing auto-plays, nothing bounces uninvited */
+  .animate-fade-in {
+    animation: fade-in 260ms ease-out 1;
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  /* Mascot motion — allowed ONLY in Learn and onboarding (low-stakes spaces) */
+  .animate-bounce-soft {
+    animation: bounce-soft 1.6s ease-in-out infinite;
+  }
+  @keyframes bounce-soft {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+  }
+  .animate-wave {
+    animation: wave 2.4s ease-in-out infinite;
+    transform-origin: 75% 70%;
+  }
+  @keyframes wave {
+    0%,
+    60%,
+    100% {
+      transform: rotate(0deg);
+    }
+    70% {
+      transform: rotate(14deg);
+    }
+    80% {
+      transform: rotate(-8deg);
+    }
+    90% {
+      transform: rotate(10deg);
+    }
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  /* playful handwritten storybook voice for headings & captions */
+  .font-story {
+    font-family: var(--font-story);
+  }
+  /* the signature storybook card: soft cream, warm gold outline, big radius */
+  .storybook-card {
+    border: 3px solid var(--line);
+    border-radius: calc(var(--radius) + 10px);
+    background: var(--surface);
+  }
+  /* thinner gold line for inner stickers and notes */
+  .storybook-note {
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+  }
+}

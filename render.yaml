@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: sahaayak
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: OTP_API_KEY
+        sync: false
+      - key: OTP_API_URL
+        value: https://auth.freebuff.app/send_otp
+      - key: APP_NAME
+        value: Sahaayak
+      - key: DATABASE_SSL
+        value: "true"
