@@ -4,7 +4,7 @@ import { StoryBackdrop } from "@/components/StoryBackdrop";
 import { RequireAuth } from "@/components/RequireAuth";
 import { BoardProvider } from "@/components/board/BoardProvider";
 import { PrefsProvider } from "@/components/PrefsProvider";
-import { VlyToolbar } from "../vly-toolbar-readonly.tsx";
+
 import React, { StrictMode, useEffect, lazy, Suspense } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router";
