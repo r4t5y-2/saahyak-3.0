@@ -195,5 +195,14 @@ createRoot(document.getElementById("root")!).render(
                 }
               />
 
-              <Route path="
-```
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
+
+        <Toaster />
+      </PrefsProvider>
+    </RootErrorBoundary>
+  </StrictMode>,
+);
+
